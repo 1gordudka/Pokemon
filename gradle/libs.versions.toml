@@ -1,0 +1,89 @@
+[versions]
+
+#Plugins
+accompanistSwiperefresh = "0.27.0"
+datastorePreferencesVersion = "1.0.0"
+androidGradlePlugin = "8.3.1"
+hilt = "2.48"
+kotlin = "1.9.0"
+ksp = "1.9.10-1.0.13"
+android-library = "8.3.1"
+
+#Dependecies
+runtime-ktx = "2.7.0"
+activity-compose = "1.8.2"
+junit = "4.13.2"
+androidx-unit = "1.1.5"
+test-espresso = "3.5.1"
+hilt-android = "2.49"
+hilt-compiler = "2.48"
+hilt-navigation = "1.2.0"
+room = "2.6.1"
+retrofit = "2.9.0"
+coil = "2.6.0"
+
+#BOM
+composeBOM = "2024.03.00"
+playServicesLocation = "21.2.0"
+jetbrainsKotlinJvm = "1.9.0"
+uiTestJunit4 = "1.6.4"
+
+[libraries]
+
+#Ktx
+accompanist-swiperefresh = { module = "com.google.accompanist:accompanist-swiperefresh", version.ref = "accompanistSwiperefresh" }
+androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferencesVersion" }
+androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "runtime-ktx" }
+androidx-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "uiTestJunit4" }
+androidx-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "uiTestJunit4" }
+
+#Compose
+compose-bom = {group = "androidx.compose", name = "compose-bom", version.ref = "composeBOM"}
+compose-ui = {group = "androidx.compose.ui", name = "ui"}
+compose-ui-graphics = {group = "androidx.compose.ui", name = "ui-graphics"}
+compose-ui-tooling-preview = {group = "androidx.compose.ui", name = "ui-tooling-preview"}
+compose-material3 = {group = "androidx.compose.material3", name = "material3"}
+activity-compose = {group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose"}
+
+#Test
+junit = {group = "junit", name = "junit", version.ref = "junit"}
+androidx-junit = {group = "androidx.test.ext", name = "junit", version.ref = "androidx-unit"}
+test-espresso = {group = "androidx.test.espresso", name = "espresso-core", version.ref = "test-espresso"}
+test-compose-junit = {group = "androidx.compose.ui", name = "ui-test-junit4"}
+
+#Debug
+compose-tooling = {group = "androidx.compose.ui", name = "ui-tooling"}
+compose-test-manifest = {group = "androidx.compose.ui", name = "ui-test-manifest"}
+
+#Hilt
+hilt-android = {group = "com.google.dagger", name = "hilt-android", version.ref = "hilt-android"}
+hilt-compiler = {group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt-compiler"}
+hilt-navigation = {group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hilt-navigation"}
+
+#Room
+room = {group = "androidx.room", name = "room-runtime", version.ref = "room"}
+room-compiler = {group = "androidx.room", name = "room-compiler", version.ref = "room"}
+room-ktx = {group = "androidx.room", name = "room-ktx", version.ref = "room"}
+
+#Retrofit
+retrofit = {group  = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit"}
+retrofit-converter = {group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit"}
+
+#Coil
+coil-compose = {group = "io.coil-kt", name = "coil-compose", version.ref = "coil"}
+play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
+
+
+
+[bundles]
+
+compose = ["compose-ui", "compose-ui-graphics", "compose-ui-tooling-preview", "compose-material3"]
+
+[plugins]
+
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+hilt = {id = "com.google.dagger.hilt.android", version.ref = "hilt"}
+kotlin = {id = "org.jetbrains.kotlin.android", version.ref = "kotlin"}
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+android-library = {id = "com.android.library", version.ref = "android-library"}
+jetbrainsKotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
